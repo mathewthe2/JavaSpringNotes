@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;`
 import org.springframework.web.bind.annotation.RequestParam;
  ```
 
-## Using methods (GET, OPTIOM, PATCH, POST, PUT, DELETE)
+## Using methods (GET, OPTION, PATCH, POST, PUT, DELETE)
  ```java
 @RequestMapping(value = "/addStudent", method = HttpMethod.POST)
  ```
