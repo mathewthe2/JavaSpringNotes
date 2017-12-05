@@ -28,30 +28,30 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 
 ## Using Optional in PathVariable
  ```java
-	@RequestMapping(value = {"/persons", "/persons/{id}"})
+@RequestMapping(value = {"/persons", "/persons/{id}"})
 
-	@ResponseBody
+@ResponseBody
 
-	List<Person> getPersonInfo(
+List<Person> getPersonInfo(
 
-	@PathVariable(value="id") Optional<Long> id) {
+@PathVariable(value="id") Optional<Long> id) {
 
-		if (id.isPresent()) {
-		List<Person> person = jdbcTemplate.query(("select * from persons where \"PERSONID\" = " + String.valueOf(id.get())), BeanPropertyRowMapper.newInstance(Person.class));
-		return person;
-		} else {
-		    return  java.util.Collections.emptyList();
-		}
+	if (id.isPresent()) {
+	List<Person> person = jdbcTemplate.query(("select * from persons where \"PERSONID\" = " + String.valueOf(id.get())), BeanPropertyRowMapper.newInstance(Person.class));
+	return person;
+	} else {
+	    return  java.util.Collections.emptyList();
+	}
 ```
 
 ## @RequestParam
  ```java
-	foo(
-		@RequestParam(
-		value = "userID",
-		required=true,
-		defaultValue = "0")
-    int userId)
+foo(
+	@RequestParam(
+	value = "userID",
+	required=true,
+	defaultValue = "0")
+int userId)
     ```
 
 
