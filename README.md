@@ -2,25 +2,24 @@
 Spring Notes for Personal Use
 
 ## Import Notes
-
-`import Java.utils.Optional;`
-
-`import org.springframework.web.bind.annotation.RequestMapping;`
-
-`import org.springframework.web.bind.annotation.ResponseBody;`
-
-`import org.springframework.ui.Model;`
-
-`import org.springframework.web.bind.annotation.PathVariable;`
-
-`import org.springframework.web.bind.annotation.RequestParam;`
+ ```java
+import Java.utils.Optional;`
+import org.springframework.web.bind.annotation.RequestMapping;`
+import org.springframework.web.bind.annotation.ResponseBody;`
+import org.springframework.ui.Model;`
+import org.springframework.web.bind.annotation.PathVariable;`
+import org.springframework.web.bind.annotation.RequestParam;
+ ```
 
 ## Using methods
-`@RequestMapping(value = "/addStudent", method = RequestMethod.POST)`
+ ```java
+@RequestMapping(value = "/addStudent", method = RequestMethod.POST)`
+ ```
 
 Or with import
-
-`import static org.springframework.web.bind.annotation.RequestMethod.*;`
+ ```java
+import static org.springframework.web.bind.annotation.RequestMethod.*;
+ ```
 
 ## Using Regex in RequestMapping
 `@Request Mapping(value = “user/{userId:[a-z]+}”, method = GET`
