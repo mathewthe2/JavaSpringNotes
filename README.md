@@ -26,20 +26,20 @@ Or with import
 `@Request Mapping(value = “user/{userId:[a-z]+}”, method = GET`
 
 ## Using Optional in PathVariable
-`@RequestMapping(value = {"/persons", "/persons/{id}"})
+	@RequestMapping(value = {"/persons", "/persons/{id}"})
 
-@ResponseBody
+	@ResponseBody
 
-List<Person> getPersonInfo(
+	List<Person> getPersonInfo(
 
-@PathVariable(value="id") Optional<Long> id) {
-        
-        if (id.isPresent()) {
-        List<Person> person = jdbcTemplate.query(("select * from persons where \"PERSONID\" = " + String.valueOf(id.get())), BeanPropertyRowMapper.newInstance(Person.class));
-        return person;
-        } else {
-            return  java.util.Collections.emptyList();
-        }`
+	@PathVariable(value="id") Optional<Long> id) {
+
+		if (id.isPresent()) {
+		List<Person> person = jdbcTemplate.query(("select * from persons where \"PERSONID\" = " + String.valueOf(id.get())), BeanPropertyRowMapper.newInstance(Person.class));
+		return person;
+		} else {
+		    return  java.util.Collections.emptyList();
+		}
 
 ## @RequestParam
 
