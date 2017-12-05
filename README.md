@@ -37,8 +37,8 @@ List<Person> getPersonInfo(
 @PathVariable(value="id") Optional<Long> id) {
 
 	if (id.isPresent()) {
-	List<Person> person = jdbcTemplate.query(("select * from persons where \"PERSONID\" = " + String.valueOf(id.get())), BeanPropertyRowMapper.newInstance(Person.class));
-	return person;
+		List<Person> person = jdbcTemplate.query(("select * from persons where \"PERSONID\" = " + String.valueOf(id.get())), BeanPropertyRowMapper.newInstance(Person.class));
+		return person;
 	} else {
 	    return  java.util.Collections.emptyList();
 	}
