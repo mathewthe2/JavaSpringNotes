@@ -1,7 +1,7 @@
 # Java Spring Notes
 Spring Notes for Personal Use
 
-## Import Notes
+## Importing
  ```java
 import Java.utils.Optional;`
 import org.springframework.web.bind.annotation.RequestMapping;`
