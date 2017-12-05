@@ -23,6 +23,9 @@ Or with import
  ```java
 import static org.springframework.web.bind.annotation.RequestMethod.*;
  ```
+   ```java
+@RequestMapping(value = "/addStudent", method = POST)
+ ```
 
 ## Using Regex in RequestMapping
  ```java
