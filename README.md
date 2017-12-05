@@ -26,7 +26,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 
 ## Using Regex in RequestMapping
  ```java
-@Request Mapping(value = “user/{userId:[a-z]+}”, method = GET`
+@Request Mapping(value = “user/{userId:[a-z]+}”, method = GET)
  ```
 
 ## Using Optional in PathVariable
