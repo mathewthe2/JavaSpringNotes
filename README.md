@@ -22,9 +22,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
  ```
 
 ## Using Regex in RequestMapping
-`@Request Mapping(value = “user/{userId:[a-z]+}”, method = GET`
+ ```java
+@Request Mapping(value = “user/{userId:[a-z]+}”, method = GET`
+ ```
 
 ## Using Optional in PathVariable
+ ```java
 	@RequestMapping(value = {"/persons", "/persons/{id}"})
 
 	@ResponseBody
@@ -39,14 +42,16 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 		} else {
 		    return  java.util.Collections.emptyList();
 		}
+```
 
 ## @RequestParam
-
+ ```java
 	foo(
 		@RequestParam(
 		value = "userID",
 		required=true,
 		defaultValue = "0")
     int userId)
+    ```
 
 
