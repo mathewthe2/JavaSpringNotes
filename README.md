@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 ## Using methods (GET, OPTIOM, PATCH, POST, PUT, DELETE)
  ```java
-@RequestMapping(value = "/addStudent", method = HttpMethod.POST)`
+@RequestMapping(value = "/addStudent", method = HttpMethod.POST)
  ```
   ```java
-@RequestMapping(value = "/addStudent", method = RequestMethod.POST)`
+@RequestMapping(value = "/addStudent", method = RequestMethod.POST)
  ```
 
 Or with import
