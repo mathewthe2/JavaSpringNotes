@@ -60,4 +60,35 @@ foo(
 int userId)
 ```
 
+# Java Shortcuts
 
+## Sorting a List
+ ```java
+List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
+names.sort((a, b) -> b.compareTo(a));
+```
+
+## define class
+ ```java
+class Person {
+    String firstName;
+    String lastName;
+
+    Person() {}
+
+    Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+}
+```
+## specify interface
+ ```java
+interface PersonFactory<P extends Person> {
+    P create(String firstName, String lastName);
+```
+## constructor reference
+ ```java
+PersonFactory<Person> personFactory = Person::new;
+Person person = personFactory.create("Peter", "Parker");
+```
